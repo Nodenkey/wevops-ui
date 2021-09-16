@@ -1,1 +1,1 @@
-To install, run npm i @wevops/styles
+To install, run npm i @wevops/ui styled-components
