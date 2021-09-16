@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import { typeScale } from './accessories/typeScale';
-import { LayoutProps } from './accessories/GeneralProps';
+import { typeScale } from '../utils/typeScale';
+import { LayoutProps } from './GeneralProps';
 
 //Divs & Containers
 export const Container = styled.div<{ fluid?: boolean }>`

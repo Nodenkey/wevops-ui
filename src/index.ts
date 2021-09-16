@@ -1,1 +1,1 @@
-export * from './GeneralStyles';
+export * from './generalStyles/GeneralStyles';
