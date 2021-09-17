@@ -17,12 +17,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/w3vops/wevops-styles-ts.git"
+    "url": "git+https://github.com/Nodenkey/wevops-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/w3vops/wevops-styles-ts/issues"
+    "url": "https://github.com/Nodenkey/wevops-ui/issues"
   },
-  "homepage": "https://github.com/w3vops/wevops-styles-ts#readme",
+  "homepage": "https://github.com/Nodenkey/wevops-ui#readme",
   "author": "Wevops",
   "license": "MIT",
   "dependencies": {
