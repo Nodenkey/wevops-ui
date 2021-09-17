@@ -1,6 +1,6 @@
 {
-  "name": "wevops-ui",
-  "version": "1.0.1",
+  "name": "@wevops/ui",
+  "version": "1.0.0",
   "description": "A package containing basic styles using styled components and typescript",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

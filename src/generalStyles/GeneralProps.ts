@@ -21,4 +21,5 @@ export interface LayoutProps {
     verticalReversePhone?: boolean;
     top?: boolean;
     center?: boolean;
+    oneColumnIpad?: boolean;
 }

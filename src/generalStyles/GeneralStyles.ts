@@ -104,7 +104,7 @@ export const Flex = styled.div<LayoutProps>`
 export const Grid = styled.div<LayoutProps>`
 	display: grid;
 	width: 100%;
-	grid-gap: ${({ phoneGap }) => phoneGap || '0'};
+	grid-gap: ${({ phoneGap, gap }) => phoneGap || gap || '0'};
 	grid-template-rows: auto;
 	align-items: ${({ alignFlexStart, alignFlexEnd }) =>
     alignFlexStart ? 'flex-start' : alignFlexEnd ? 'flex-end' : 'center'};
@@ -155,6 +155,10 @@ export const Grid = styled.div<LayoutProps>`
             : `repeat(${props.phoneNum}, 1fr)`
         : '1fr'};
 	}
+	@media only screen and (max-width: 992px) {
+		grid-template-columns: ${props =>
+			props.oneColumnIpad && '1fr'
+		}
 `;
 
 export const ImageContainer = styled.div<{
