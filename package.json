@@ -15,6 +15,9 @@
     "ts",
     "styles"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Nodenkey/wevops-ui.git"
