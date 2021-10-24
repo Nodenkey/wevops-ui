@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { typeScale } from '../utils/typeScale';
-import { LayoutProps } from './GeneralProps';
+import { LayoutProps, TextProps } from './GeneralProps';
 
 //Divs & Containers
 export const Container = styled.div<{ fluid?: boolean }>`
@@ -159,6 +159,10 @@ export const Grid = styled.div<LayoutProps>`
 		grid-template-columns: ${props =>
 			props.oneColumnIpad && '1fr'
 		}
+	}
+	@media only screen and (max-width: 1200px) {
+		grid-template-columns: ${props => props.oneColumnIpadPro && '1fr'};
+	}
 `;
 
 export const ImageContainer = styled.div<{
@@ -187,85 +191,172 @@ export const LayoutChildrenWrapper = styled.div`
 `;
 
 //Texts
-export const HeaderOne = styled.h1<{center: string}>`
+export const HeaderOne = styled.h1<TextProps>`
 	margin-top: 0;
 	font-size: ${typeScale.headerTwo};
 	display: block;
-	text-align: ${({center}) => center ? 'center !important' : 'left'};
+	text-align: ${({ center }) => (center ? 'center !important' : 'left')};
 	line-height: 120%;
+	${({ center }) =>
+		center &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
+	${({ leftAlignCenter }) =>
+		leftAlignCenter &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
 	@media only screen and (min-width: 900px) {
 		font-size: ${typeScale.headerOne};
 	}
 `;
 
-export const HeaderTwo = styled.h2<{center: string}>`
+export const HeaderTwo = styled.h2<TextProps>`
 	font-size: ${typeScale.headerThree};
 	display: block;
-	text-align: ${({center}) => center ? 'center !important' : 'left'};
+	text-align: ${({ center }) => (center ? 'center !important' : 'left')};
 	line-height: 120%;
+	${({ center }) =>
+		center &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
+	${({ leftAlignCenter }) =>
+		leftAlignCenter &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
 	@media only screen and (min-width: 600px) {
 		font-size: ${typeScale.headerTwo};
 	}
 `;
 
-export const HeaderThree = styled.h3<{center: string}>`
+export const HeaderThree = styled.h3<TextProps>`
 	font-size: ${typeScale.headerFour};
-	text-align: ${({center}) => center ? 'center !important' : 'left'};
+	text-align: ${({ center }) => (center ? 'center !important' : 'left')};
 	display: block;
 	line-height: 140%;
+	${({ center }) =>
+		center &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
+	${({ leftAlignCenter }) =>
+		leftAlignCenter &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
 	@media only screen and (min-width: 600px) {
 		font-size: ${typeScale.headerThree};
 	}
 `;
 
-export const HeaderFour = styled.h4<{center: string}>`
+export const HeaderFour = styled.h4<TextProps>`
 	font-size: ${typeScale.headerFive};
-	text-align: ${({center}) => center ? 'center !important' : 'left'};
+	text-align: ${({ center }) => (center ? 'center !important' : 'left')};
 	display: block;
 	line-height: 140%;
+	${({ center }) =>
+		center &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
+	${({ leftAlignCenter }) =>
+		leftAlignCenter &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
 	@media only screen and (min-width: 600px) {
 		font-size: ${typeScale.headerFour};
 	}
 `;
 
-export const HeaderFive = styled.h5<{center: string}>`
+export const HeaderFive = styled.h5<TextProps>`
 	font-size: ${typeScale.paragraph};
-	text-align: ${({center}) => center ? 'center !important' : 'left'};
+	text-align: ${({ center }) => (center ? 'center !important' : 'left')};
 	display: block;
 	line-height: 200%;
+	${({ center }) =>
+		center &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
+	${({ leftAlignCenter }) =>
+		leftAlignCenter &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
 	@media only screen and (min-width: 600px) {
 		font-size: ${typeScale.headerFive};
 		max-width: 800px;
 	}
 `;
 
-export const Paragraph = styled.p<{center: string}>`
+export const Paragraph = styled.p<TextProps>`
 	font-size: ${typeScale.paragraph};
 	display: block;
-	text-align: ${({center}) => center ? 'center !important' : 'left'};
+	text-align: ${({ center }) => (center ? 'center !important' : 'left')};
 	line-height: 200%;
 	max-width: 700px;
-	margin-top: initial;
-	margin-bottom: initial;
-	margin-right: auto;
-	margin-left: auto;
+	${({ center }) =>
+		center &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
+	${({ leftAlignCenter }) =>
+		leftAlignCenter &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
 `;
 
-export const ShadowBox = styled.div`
+export const Small = styled.small<TextProps>`
+	font-size: ${typeScale.small};
+	display: block;
+	text-align: ${({ center }) => (center ? 'center !important' : 'left')};
+	line-height: 200%;
+	max-width: 700px;
+	${({ center }) =>
+		center &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
+	${({ leftAlignCenter }) =>
+		leftAlignCenter &&
+		css`
+			margin-left: auto;
+			margin-right: auto;
+		`};
+`;
+
+export const ShadowBox = styled.div<{ widthContent?: boolean }>`
 	min-height: 100px;
 	position: relative;
 	background-color: white;
 	padding: 30px;
 	margin: 0 auto;
-	max-width: max-content;
 	-webkit-box-shadow: 0 3px 6px 0 #b4b4b450;
 	-moz-box-shadow: 0 3px 6px 0 #b4b4b450;
 	box-shadow: 0 3px 6px 0 #b4b4b450;
-
-	> div {
-		height: 100%;
-		width: 100%;
-	}
+	${({ widthContent }) =>
+		widthContent &&
+		css`
+			max-width: max-content;
+		`}
 `;
 
 export const BannerWrapper = styled.div`
@@ -330,9 +421,10 @@ export const Circle = styled.div<{
 	z-index: -1;
 `;
 
-export const Divider = styled.div<{ diff: string }>`
+export const Divider = styled.div<{ diff?: string; spacing: string }>`
 	width: ${({ diff }) => `calc(100% + ${diff} + ${diff} )`};
-	height: 1px;
-	background-color: #B4B4B429;
-	margin: 20px 0 20px ${({ diff }) => diff && '0'};
+	height: 1px !important;
+	background-color: #777777;
+	margin: ${({ spacing, diff }) =>
+		diff ? `${spacing} 0 ${spacing} ${diff}` : `${spacing} 0 ${spacing} 0`};
 `;

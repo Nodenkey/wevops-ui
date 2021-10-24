@@ -22,4 +22,10 @@ export interface LayoutProps {
     top?: boolean;
     center?: boolean;
     oneColumnIpad?: boolean;
+    oneColumnIpadPro?: boolean;
+}
+
+export interface TextProps {
+    center?: boolean;
+    leftAlignCenter?: boolean;
 }

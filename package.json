@@ -1,6 +1,6 @@
 {
   "name": "@wevops/ui",
-  "version": "1.0.0",
+  "version": "1.0.12",
   "description": "A package containing basic styles using styled components and typescript",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -28,9 +28,6 @@
   "homepage": "https://github.com/Nodenkey/wevops-ui#readme",
   "author": "Wevops",
   "license": "MIT",
-  "dependencies": {
-    "styled-components": "^5.3.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-react": "^7.14.5",
@@ -58,6 +55,7 @@
   },
   "peerDependencies": {
     "react": ">16.0.0",
-    "react-dom": ">16.0.0"
+    "react-dom": ">16.0.0",
+    "styled-components": "^5.3.0"
   }
 }
